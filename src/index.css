@@ -3,10 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
 }
 body {
   width: 100vw;
   height: 100vh;
+  /* background: linear-gradient(to bottom right,#110729 #170a39, #030203) #313c3b,;#35323d */
+  background: radial-gradient(circle at 50% 50%, #35323d, #030203);
+  color: #666666;
 }
 #root {
   width: 100%;

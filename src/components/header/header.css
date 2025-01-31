@@ -1,0 +1,100 @@
+header {
+  gap: 20px;
+  box-shadow: 3px 3px 10px rgba(102, 102, 102, 0.4);
+  height: 110px; /*110 266 */
+  overflow: hidden;
+  transition: height 350ms ease-in-out;
+}
+#logo-bars-icon-div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#logo-img-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-left: 5px solid rgb(102, 102, 102);
+  border-right: 5px solid rgb(102, 102, 102);
+  overflow: hidden;
+}
+#logo-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#logo-container h1 {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+#mobile-menu-btn {
+  display: none;
+  font-size: 2rem;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 350ms ease-in-out;
+}
+#links-contact-icons-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  overflow: hidden;
+}
+#nav-links,
+#nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+#nav-links li,
+#nav-icons li {
+  padding: 5px;
+  text-align: center;
+  transition: background-color 350ms ease-in-out, color 350ms ease-in-out;
+}
+#nav-links li:hover,
+#nav-icons li:hover {
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+}
+
+.show-nav-links {
+  height: 240px;
+}
+.rotate-mobile-nav-btn {
+  transform: rotateZ(90deg);
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    flex-direction: column;
+    gap: 0px;
+  }
+  #logo-bars-icon-div {
+    width: 100%;
+  }
+  #mobile-menu-btn {
+    display: flex;
+  }
+  #links-contact-icons-div {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+  #nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  #nav-links li,
+  #nav-links li a {
+    width: 100%;
+  }
+}

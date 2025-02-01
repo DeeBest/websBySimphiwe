@@ -19,6 +19,10 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleRemoveShowNavClass);
+
+    return () => {
+      window.removeEventListener('resize', handleRemoveShowNavClass);
+    };
   });
 
   const handleShowNavLinks = () => {

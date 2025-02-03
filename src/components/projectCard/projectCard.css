@@ -1,0 +1,149 @@
+.project-card {
+  background-color: hsl(0, 0%, 70%);
+  color: rgb(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.6);
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+}
+.card-front {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 500ms ease-in-out;
+  transform-style: preserve-3d;
+}
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+.img-container img {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+.project-name-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.project-name-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.project-name-container hr {
+  background-color: black;
+}
+.project-desc {
+  padding: 10px;
+}
+.project-desc p {
+  font-size: 1.1rem;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  transition: transform 500ms ease-in-out;
+  transform-style: preserve-3d;
+  padding: 15px;
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 70%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card-back-header {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+.card-back-header h1 {
+  font-size: 1.5rem;
+  flex: 1;
+}
+.card-back-header p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: tomato;
+  border-bottom: 1px solid;
+  font-style: oblique;
+}
+.projectDesc-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: auto;
+}
+.projectDesc-div hr,
+.project-name-container hr {
+  border: none;
+  height: 3px;
+  width: 20%;
+  align-self: center;
+  border-radius: 10px;
+}
+.projectDesc-div hr {
+  background-color: white;
+}
+.projectDesc-div p {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.tech-div {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+.tech-div h3 {
+  font-size: 1.8rem;
+}
+.tech-div ul {
+  margin-top: 30px;
+  list-style: circle;
+}
+.tech-div ul li::marker {
+  color: tomato;
+}
+.links-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.links-div a {
+  text-decoration: none;
+}
+.links-div a .icon {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 350ms ease-in-out;
+}
+.links-div a .icon:hover {
+  color: white;
+}
+.project-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+.project-card:hover .card-back {
+  transform: rotateY(0deg);
+}

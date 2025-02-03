@@ -1,0 +1,39 @@
+#skills-listing-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#skills-listing-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 70%);
+}
+#skills-listing-header h2 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+#skills-listing-header hr {
+  width: 50%;
+  height: 2px;
+  margin: 10px 0px 20px 0px;
+  align-self: flex-start;
+  background-color: hsl(0, 0%, 40%);
+  border: none;
+  border-radius: 4px;
+}
+#skills-listing-header p {
+  line-height: 1.1;
+  font-size: 1.15rem;
+  font-style: oblique;
+}
+#skills-listing-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

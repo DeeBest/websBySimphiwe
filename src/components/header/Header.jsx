@@ -1,8 +1,9 @@
-import { FaBars, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Link, NavLink } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import './header.css';
+import ContactIcons from '../contact-icons/ContactIcons';
 
 const Header = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
@@ -60,23 +61,7 @@ const Header = () => {
             <NavLink to="/skills">Skills</NavLink>
           </li>
         </ul>
-        <ul id="nav-icons">
-          <li>
-            <Link to="mailto:simphiwedladla8@gmail.com">
-              <FaEnvelope />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://github.com/DeeBest">
-              <FaGithub />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.linkedin.com/in/dladla-simphiwe-89061a20a/">
-              <FaLinkedin />
-            </Link>
-          </li>
-        </ul>
+        <ContactIcons />
       </div>
     </header>
   );

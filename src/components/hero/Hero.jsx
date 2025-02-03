@@ -57,7 +57,7 @@ const Hero = () => {
               detail, I develop and maintain cutting edge applications.
             </p>
           </div>
-          <button>View Projects</button>
+          <button>View All Projects</button>
         </div>
       </div>
     </section>

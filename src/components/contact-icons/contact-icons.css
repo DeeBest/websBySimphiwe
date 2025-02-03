@@ -1,0 +1,15 @@
+#nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  overflow: hidden;
+}
+#nav-icons li {
+  padding: 5px;
+  text-align: center;
+  transition: background-color 350ms ease-in-out, color 350ms ease-in-out;
+}
+#nav-icons li:hover {
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+}

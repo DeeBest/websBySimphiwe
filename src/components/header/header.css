@@ -51,21 +51,18 @@ header {
   gap: 20px;
   overflow: hidden;
 }
-#nav-links,
-#nav-icons {
+#nav-links {
   display: flex;
   align-items: center;
   gap: 1px;
   overflow: hidden;
 }
-#nav-links li,
-#nav-icons li {
+#nav-links li {
   padding: 5px;
   text-align: center;
   transition: background-color 350ms ease-in-out, color 350ms ease-in-out;
 }
-#nav-links li:hover,
-#nav-icons li:hover {
+#nav-links li:hover {
   background-color: hsl(0, 0%, 30%);
   color: white;
 }

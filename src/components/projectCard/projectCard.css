@@ -3,7 +3,7 @@
   color: rgb(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.6);
-  height: 400px;
+  height: 300px;
   position: relative;
   perspective: 1000px;
   overflow: hidden;
@@ -40,7 +40,7 @@
 }
 .project-name-container h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .project-name-container hr {
   background-color: black;
@@ -66,7 +66,7 @@
   color: hsl(0, 0%, 70%);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 .card-back-header {
   display: flex;
@@ -88,7 +88,7 @@
 .projectDesc-div {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
   margin-bottom: auto;
 }
@@ -115,7 +115,7 @@
   gap: 10px;
 }
 .tech-div h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .tech-div ul {
   padding-left: 50%;

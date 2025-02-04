@@ -1,9 +1,10 @@
+import ProjectsListing from '../../components/projectsListing/ProjectsListing';
 import './projectsPage.css';
 
 const ProjectsPage = () => {
   return (
     <main>
-      <h1>Projects Page</h1>
+      <ProjectsListing />
     </main>
   );
 };

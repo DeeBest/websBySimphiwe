@@ -2,6 +2,7 @@ import ProjectCard from '../projectCard/ProjectCard';
 import './projectsListing.css';
 import { useState } from 'react';
 import { FaTriangleExclamation } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const ProjectsListing = ({ isHome }) => {
   const [projects, setProjects] = useState([
@@ -91,7 +92,11 @@ const ProjectsListing = ({ isHome }) => {
           })}
         </section>
       )}
-      {featuredProjects.length > 0 ? <button>View All Projects</button> : null}
+      {isHome && featuredProjects.length > 0 && (
+        <button>
+          <Link to="/projects">View All Projects</Link>
+        </button>
+      )}
     </section>
   );
 };

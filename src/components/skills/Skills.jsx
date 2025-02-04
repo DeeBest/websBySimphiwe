@@ -2,6 +2,8 @@ import { useState } from 'react';
 import SkillsCategoryCard from '../skillsCategory/SkillsCategoryCard';
 import './skills.css';
 
+import { Link } from 'react-router-dom';
+
 const Skills = ({ isHome }) => {
   const [skillsCategories, setSkillsCategories] = useState([
     {
@@ -148,6 +150,11 @@ const Skills = ({ isHome }) => {
           <SkillsCategoryCard skillCategory={skillCategory} key={index} />
         ))}
       </section>
+      {isHome && (
+        <button id="view-all-skills-btn">
+          <Link to="/skills">View All Skills</Link>
+        </button>
+      )}
     </div>
   );
 };

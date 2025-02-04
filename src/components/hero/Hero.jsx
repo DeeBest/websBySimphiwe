@@ -1,5 +1,6 @@
 import './hero.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -57,7 +58,9 @@ const Hero = () => {
               detail, I develop and maintain cutting edge applications.
             </p>
           </div>
-          <button>View All Projects</button>
+          <button>
+            <Link to="/projects">View All Projects</Link>
+          </button>
         </div>
       </div>
     </section>

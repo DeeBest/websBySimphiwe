@@ -3,7 +3,7 @@ import './projectsListing.css';
 import { useState } from 'react';
 import { FaTriangleExclamation } from 'react-icons/fa6';
 
-const ProjectsListing = () => {
+const ProjectsListing = ({ isHome }) => {
   const [projects, setProjects] = useState([
     {
       projectName: 'shopping cart',
@@ -61,6 +61,10 @@ const ProjectsListing = () => {
     },
   ]);
 
+  const [featuredProjects, setFeaturedProjects] = useState(
+    isHome ? projects.slice(0, 3) : projects
+  );
+
   return (
     <section id="projects-listing-container">
       <div id="projects-listing-header">
@@ -73,7 +77,7 @@ const ProjectsListing = () => {
           click a project card.
         </p>
       </div>
-      {projects.length <= 0 ? (
+      {featuredProjects.length <= 0 ? (
         <section id="no-projects-sec">
           <FaTriangleExclamation />
           <h1 id="no-projects-h1">
@@ -82,11 +86,12 @@ const ProjectsListing = () => {
         </section>
       ) : (
         <section id="projects-container">
-          {projects.map((project, index) => {
+          {featuredProjects.map((project, index) => {
             return <ProjectCard project={project} key={index} />;
           })}
         </section>
       )}
+      {featuredProjects.length > 0 ? <button>View All Projects</button> : null}
     </section>
   );
 };

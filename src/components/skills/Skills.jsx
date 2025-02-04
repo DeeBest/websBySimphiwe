@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SkillsCategoryCard from '../skillsCategory/SkillsCategoryCard';
 import './skills.css';
 
-const Skills = () => {
+const Skills = ({ isHome }) => {
   const [skillsCategories, setSkillsCategories] = useState([
     {
       category: 'Development Tools',
@@ -113,6 +113,25 @@ const Skills = () => {
     },
   ]);
 
+  const featuredSkills = new Set([
+    'React',
+    'NodeJS',
+    'ExpressJS',
+    'MongoDB',
+    'Git',
+  ]);
+
+  const filteredSkillsCategories = isHome
+    ? skillsCategories
+        .map((category) => ({
+          ...category,
+          skills: category.skills.filter((skill) =>
+            featuredSkills.has(skill.skillName)
+          ),
+        }))
+        .filter((category) => category.skills.length > 0)
+    : skillsCategories;
+
   return (
     <div id="skills-listing-container">
       <section id="skills-listing-header">
@@ -125,11 +144,12 @@ const Skills = () => {
         </p>
       </section>
       <section id="skills-listing-body">
-        {skillsCategories.map((skillCategory, index) => (
+        {filteredSkillsCategories.map((skillCategory, index) => (
           <SkillsCategoryCard skillCategory={skillCategory} key={index} />
         ))}
       </section>
     </div>
   );
 };
+
 export default Skills;

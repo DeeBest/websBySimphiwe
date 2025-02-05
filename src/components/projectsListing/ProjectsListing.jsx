@@ -1,70 +1,20 @@
 import ProjectCard from '../projectCard/ProjectCard';
 import './projectsListing.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { FaTriangleExclamation } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/context';
 
 const ProjectsListing = ({ isHome }) => {
-  const [projects, setProjects] = useState([
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'frontend',
-    },
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'backend',
-    },
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'full-stack',
-    },
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'frontend',
-    },
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'backend',
-    },
-    {
-      projectName: 'shopping cart',
-      projectDesc: 'A react project with multiple pages',
-      codeReviewLink: 'https://github.com/DeeBest/shopping-cart',
-      livePreviewLink: 'https://deebest.github.io/shopping-cart/',
-      imgUrl: 'src/assets/projects-images/shopping-cart.jpg',
-      usedTechStack: ['reactJS', 'css', 'html', 'javascript'],
-      category: 'full-stack',
-    },
-  ]);
+  const { projects } = useContext(Context);
 
-  const [featuredProjects, setFeaturedProjects] = useState(
-    isHome ? projects.slice(0, 3) : projects
-  );
+  // const [featuredProjects, setFeaturedProjects] = useState([]);
+
+  // if (projects.length > 3 && isHome) {
+  //   setFeaturedProjects(projects.slice(0, 3));
+  // } else {
+  //   setFeaturedProjects(projects);
+  // }
 
   return (
     <section id="projects-listing-container">
@@ -78,7 +28,7 @@ const ProjectsListing = ({ isHome }) => {
           click a project card.
         </p>
       </div>
-      {featuredProjects.length <= 0 ? (
+      {projects.length <= 0 ? (
         <section id="no-projects-sec">
           <FaTriangleExclamation />
           <h1 id="no-projects-h1">
@@ -87,12 +37,12 @@ const ProjectsListing = ({ isHome }) => {
         </section>
       ) : (
         <section id="projects-container">
-          {featuredProjects.map((project, index) => {
+          {projects.map((project, index) => {
             return <ProjectCard project={project} key={index} />;
           })}
         </section>
       )}
-      {isHome && featuredProjects.length > 0 && (
+      {isHome && projects.length > 0 && (
         <button>
           <Link to="/projects">View All Projects</Link>
         </button>

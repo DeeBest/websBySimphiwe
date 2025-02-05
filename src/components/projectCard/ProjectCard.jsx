@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
           <hr />
         </div>
         <div className="project-desc">
-          <p>{project.projectDesc}</p>
+          <p>{project.projectDesc.slice(0, 90)}...</p>
         </div>
       </div>
       <div className="card-back">

@@ -21,13 +21,14 @@
 }
 .img-container {
   width: 100%;
+  min-height: 150px;
+  max-height: 150px;
   overflow: hidden;
+  background-color: aqua;
 }
 .img-container img {
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
   object-fit: cover;
 }
 .project-name-container {
@@ -70,16 +71,16 @@
 }
 .card-back-header {
   display: flex;
-  gap: 20px;
+  gap: 5px;
   width: 100%;
   align-items: center;
 }
 .card-back-header h1 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   flex: 1;
 }
 .card-back-header p {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bolder;
   color: tomato;
   border-bottom: 1px solid;
@@ -90,7 +91,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  margin-bottom: auto;
+  margin-bottom: 10px;
 }
 .projectDesc-div hr,
 .project-name-container hr {
@@ -104,7 +105,7 @@
   background-color: white;
 }
 .projectDesc-div p {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-style: italic;
   text-transform: capitalize;
 }
@@ -113,16 +114,20 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: auto;
 }
 .tech-div h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .tech-div ul {
-  padding-left: 50%;
-  list-style: circle;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.tech-div ul li::marker {
-  color: tomato;
+.tech-div ul li {
+  font-size: 0.8rem;
+  text-decoration: underline;
 }
 .links-div {
   width: 100%;

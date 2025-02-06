@@ -1,20 +1,25 @@
 import ProjectCard from '../projectCard/ProjectCard';
 import './projectsListing.css';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { FaTriangleExclamation } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/context';
 
 const ProjectsListing = ({ isHome }) => {
   const { projects } = useContext(Context);
+  const categories = ['All'];
 
-  // const [featuredProjects, setFeaturedProjects] = useState([]);
+  function handleFilterCategories() {
+    projects.filter((project) => {
+      if (!categories.includes(project.category)) {
+        categories.push(project.category);
+        return categories;
+      }
+    });
+  }
+  handleFilterCategories();
 
-  // if (projects.length > 3 && isHome) {
-  //   setFeaturedProjects(projects.slice(0, 3));
-  // } else {
-  //   setFeaturedProjects(projects);
-  // }
+  const limit = isHome ? 3 : projects.length;
 
   return (
     <section id="projects-listing-container">
@@ -36,11 +41,31 @@ const ProjectsListing = ({ isHome }) => {
           </h1>
         </section>
       ) : (
-        <section id="projects-container">
-          {projects.map((project, index) => {
-            return <ProjectCard project={project} key={index} />;
-          })}
-        </section>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px',
+            width: '100%',
+            height: '100%',
+            position: 'relative',
+          }}
+        >
+          {!isHome && (
+            <div id="filter-btns-container">
+              {categories.map((category, index) => {
+                return <button key={index}>{category}</button>;
+              })}
+            </div>
+          )}
+          <section id="projects-container">
+            {projects.slice(0, limit).map((project, index) => {
+              return <ProjectCard project={project} key={index} />;
+            })}
+          </section>
+        </div>
       )}
       {isHome && projects.length > 0 && (
         <button>

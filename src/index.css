@@ -29,7 +29,7 @@ body {
 header,
 main,
 footer {
-  padding: 20px;
+  padding: 20px 150px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -38,4 +38,11 @@ footer {
 main {
   flex: 1;
   padding-top: 140px;
+}
+@media screen and (max-width: 760px) {
+  header,
+  main,
+  footer {
+    padding: 20px;
+  }
 }

@@ -1,7 +1,8 @@
 header {
-  gap: 20px;
   box-shadow: 3px 3px 10px rgba(102, 102, 102, 0.4);
   height: 110px;
+  gap: 20px;
+  align-items: center;
   overflow: hidden;
   transition: height 350ms ease-in-out, background-color 350ms ease-in-out;
   position: fixed;

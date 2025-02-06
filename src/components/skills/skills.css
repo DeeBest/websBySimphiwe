@@ -36,6 +36,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  z-index: 1;
 }
 #view-all-skills-btn {
   align-self: center;
@@ -54,4 +55,21 @@
 #view-all-skills-btn:hover {
   opacity: 0.8;
   box-shadow: none;
+}
+#skill-categories-select {
+  z-index: 2;
+  position: sticky;
+  top: 120px;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid tomato;
+  outline: none;
+  border-radius: 10px 10px 0px 0px;
+  background-color: hsl(0, 0%, 70%);
+  color: hsl(0, 0%, 30%);
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

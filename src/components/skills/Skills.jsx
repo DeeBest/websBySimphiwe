@@ -145,11 +145,34 @@ const Skills = ({ isHome }) => {
           just beginning.
         </p>
       </section>
-      <section id="skills-listing-body">
-        {filteredSkillsCategories.map((skillCategory, index) => (
-          <SkillsCategoryCard skillCategory={skillCategory} key={index} />
-        ))}
-      </section>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: '20px',
+          width: '100%',
+        }}
+      >
+        {!isHome && (
+          <select name="skill-categories-select" id="skill-categories-select">
+            <option value="All">All</option>
+            <option value="Development Tools">Development Tools</option>
+            <option value="Frontend Development">Frontend Development</option>
+            <option value="Backend Development">Backend Development</option>
+            <option value="Database">Database</option>
+            <option value="Testing">Testing</option>
+            <option value="Operating System">Operating System</option>
+          </select>
+        )}
+        <section id="skills-listing-body">
+          {filteredSkillsCategories.map((skillCategory, index) => (
+            <SkillsCategoryCard skillCategory={skillCategory} key={index} />
+          ))}
+        </section>
+      </div>
       {isHome && (
         <button id="view-all-skills-btn">
           <Link to="/skills">View All Skills</Link>

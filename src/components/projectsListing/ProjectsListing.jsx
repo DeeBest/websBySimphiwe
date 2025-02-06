@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../context/context';
 
 const ProjectsListing = ({ isHome }) => {
-  const { projects } = useContext(Context);
+  const { projects, setProjects } = useContext(Context);
+  const [displayProjects, setDisplayProjects] = useState([...projects]);
   const categories = ['All'];
 
   function handleFilterCategories() {
@@ -18,6 +19,22 @@ const ProjectsListing = ({ isHome }) => {
     });
   }
   handleFilterCategories();
+
+  const handleFilterProjects = (projectCategory) => {
+    const newList = projects.filter((project) => {
+      if (project.category === projectCategory) {
+        return project;
+      }
+      if (projectCategory === 'All') {
+        return projects;
+      }
+    });
+    setDisplayProjects(newList);
+  };
+
+  useEffect(() => {
+    handleFilterProjects('All');
+  }, [projects]);
 
   const limit = isHome ? 3 : projects.length;
 
@@ -56,12 +73,19 @@ const ProjectsListing = ({ isHome }) => {
           {!isHome && (
             <div id="filter-btns-container">
               {categories.map((category, index) => {
-                return <button key={index}>{category}</button>;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleFilterProjects(category)}
+                  >
+                    {category}
+                  </button>
+                );
               })}
             </div>
           )}
           <section id="projects-container">
-            {projects.slice(0, limit).map((project, index) => {
+            {displayProjects.slice(0, limit).map((project, index) => {
               return <ProjectCard project={project} key={index} />;
             })}
           </section>

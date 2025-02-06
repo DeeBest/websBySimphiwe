@@ -27,6 +27,7 @@ const ContextProvider = (props) => {
 
   const contextValue = {
     projects,
+    setProjects,
     isLoading,
     backendUrl,
   };

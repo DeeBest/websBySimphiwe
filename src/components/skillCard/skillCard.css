@@ -1,6 +1,7 @@
 .skill-card {
   display: flex;
   overflow: hidden;
+  max-width: 400px;
   border-radius: 10px;
   transition: box-shadow 350ms ease-in-out;
 }
@@ -34,7 +35,8 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 5px;
   background-color: hsl(0, 0%, 20%);
   color: white;
   padding: 10px;
@@ -50,4 +52,5 @@
   text-transform: capitalize;
   font-size: small;
   font-style: oblique;
+  text-align: start;
 }

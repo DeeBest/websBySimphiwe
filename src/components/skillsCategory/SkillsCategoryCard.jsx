@@ -1,14 +1,14 @@
 import SkillCard from '../skillCard/SkillCard';
 import './skillsCategoryCard.css';
 
-const SkillsCategoryCard = ({ skillCategory }) => {
+const SkillsCategoryCard = ({ categoryTitle, skillsArr }) => {
   return (
     <div className="skills-category-card">
-      <h3>{skillCategory.category}</h3>
+      <h3>{categoryTitle}</h3>
       <div id="skills-cards-div">
-        {skillCategory.skills.map((skill, index) => {
-          return <SkillCard key={index} skill={skill} />;
-        })}
+        {skillsArr.map((skill, index) => (
+          <SkillCard key={index} skill={skill} />
+        ))}
       </div>
     </div>
   );

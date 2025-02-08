@@ -41,8 +41,10 @@ main {
 }
 @media screen and (max-width: 760px) {
   header,
-  main,
   footer {
     padding: 20px;
+  }
+  main {
+    padding: 140px 20px 20px 20px;
   }
 }

@@ -41,7 +41,11 @@ const Header = () => {
               width={100}
             />
           </div>
-          <h1>Simphiwe Dladla</h1>
+          <svg id="logo-text" viewBox="0 0 600 200">
+            <text x="90%" y="70%" textAnchor="end" className="text-body">
+              SimphiweDladla
+            </text>
+          </svg>
         </div>
         <FaBars
           id="mobile-menu-btn"

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1rem;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -39,6 +40,12 @@ main {
   flex: 1;
   padding-top: 140px;
 }
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 3s ease-in-out infinite alternate breath;
+}
 @media screen and (max-width: 760px) {
   header,
   footer {
@@ -46,5 +53,59 @@ main {
   }
   main {
     padding: 140px 20px 20px 20px;
+  }
+}
+@keyframes glow {
+  0% {
+    color: hsl(0, 0%, 25%);
+  }
+  50% {
+    color: hsl(0, 0%, 50%);
+  }
+  75% {
+    color: hsl(0, 0%, 75%);
+  }
+  100% {
+    color: hsl(0, 0%, 100%);
+  }
+}
+@keyframes breath {
+  from {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+@keyframes fadeFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }

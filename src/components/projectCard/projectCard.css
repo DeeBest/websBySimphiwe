@@ -7,6 +7,8 @@
   position: relative;
   perspective: 1000px;
   overflow: hidden;
+  transition: transform 350ms ease-in-out;
+  z-index: 3;
 }
 .card-front {
   display: flex;
@@ -24,7 +26,7 @@
   min-height: 150px;
   max-height: 150px;
   overflow: hidden;
-  background-color: aqua;
+  background-color: hsl(0, 0%, 50%);
 }
 .img-container img {
   width: 100%;
@@ -147,9 +149,19 @@
 .links-div a .icon:hover {
   color: white;
 }
+.project-card:hover {
+  transform: scale(1.3);
+  z-index: 10;
+}
 .project-card:hover .card-front {
   transform: rotateY(180deg);
 }
 .project-card:hover .card-back {
   transform: rotateY(0deg);
+}
+@media screen and (max-width: 600px) {
+  .project-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
 }

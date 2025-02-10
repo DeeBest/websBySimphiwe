@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../context/context';
 
 const ProjectsListing = ({ isHome }) => {
-  const { projects, setProjects } = useContext(Context);
+  const { projects } = useContext(Context);
   const [displayProjects, setDisplayProjects] = useState([...projects]);
   const categories = ['All'];
 

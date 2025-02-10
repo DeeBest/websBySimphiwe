@@ -3,7 +3,7 @@ import './skillsPage.css';
 
 const SkillsPage = () => {
   return (
-    <main>
+    <main id="skills-page">
       <Skills />
     </main>
   );

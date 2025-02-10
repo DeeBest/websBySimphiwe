@@ -1,5 +1,6 @@
 #skills-listing-container {
   width: 100%;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -61,7 +62,7 @@
 }
 #skill-categories-select {
   z-index: 2;
-  position: fixed;
+  position: sticky;
   top: 120px;
   left: 0;
   width: 200px;

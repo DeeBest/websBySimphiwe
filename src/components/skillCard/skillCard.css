@@ -3,10 +3,11 @@
   overflow: hidden;
   max-width: 400px;
   border-radius: 10px;
-  transition: box-shadow 350ms ease-in-out;
+  transition: box-shadow 350ms ease-in-out, transform 350ms ease-in-out;
 }
 .skill-card:hover {
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+  transform: scale(1.2);
 }
 .skill-card .skill-img-container {
   width: 120px;

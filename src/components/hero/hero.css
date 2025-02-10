@@ -1,5 +1,6 @@
 #hero {
   width: 100%;
+  min-height: 400px;
   box-shadow: 3px 3px 7px rgb(255, 255, 255, 0.4);
   background-image: url('src/assets/hero-bg-img.jpg');
   background-position: center;
@@ -37,6 +38,7 @@
 }
 #hero-body {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   width: 100%;
 }
@@ -81,7 +83,7 @@
 }
 
 @media screen and (max-width: 530px) {
-  #hero-body {
-    flex-direction: column;
+  #hero {
+    min-height: 200px;
   }
 }

@@ -4,10 +4,12 @@
   max-width: 400px;
   border-radius: 10px;
   transition: box-shadow 350ms ease-in-out, transform 350ms ease-in-out;
+  z-index: 5;
 }
 .skill-card:hover {
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
-  transform: scale(1.2);
+  transform: scale(1.1);
+  z-index: 1000;
 }
 .skill-card .skill-img-container {
   width: 120px;

@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  animation: 500ms ease-in fadeFromLeft;
 }
 #projects-listing-container button {
   align-self: center;

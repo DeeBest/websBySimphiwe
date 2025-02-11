@@ -56,13 +56,28 @@ const Header = () => {
       <div id="links-contact-icons-div">
         <ul id="nav-links">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/projects">Projects</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to="/projects"
+            >
+              Projects
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/skills">Skills</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to="/skills"
+            >
+              Skills
+            </NavLink>
           </li>
         </ul>
         <ContactIcons />

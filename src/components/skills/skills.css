@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  animation: 500ms ease-in fadeFromLeft;
 }
 #skills-listing-header {
   display: flex;

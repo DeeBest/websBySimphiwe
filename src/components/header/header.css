@@ -94,12 +94,13 @@ header {
 }
 #nav-links li {
   padding: 5px;
+  border-radius: 5px;
   text-align: center;
   transition: background-color 350ms ease-in-out, color 350ms ease-in-out;
 }
 #nav-links li:hover {
-  background-color: hsl(0, 0%, 30%);
   color: white;
+  background-color: hsl(0, 0%, 30%);
 }
 
 .show-nav-links {
@@ -109,6 +110,12 @@ header {
   transform: rotateZ(90deg);
 }
 
+.active {
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
 @media screen and (max-width: 530px) {
   header {
     flex-direction: column;

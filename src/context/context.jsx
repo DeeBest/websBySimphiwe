@@ -17,7 +17,7 @@ const ContextProvider = (props) => {
     try {
       const res = await Promise.all(urls.map((url) => axios.get(url)));
       const projectsData = await res[0].data.projects;
-      const skillsData = await res[1].data;
+      const skillsData = await res[1].data.skills;
       setSkills(skillsData);
       setProjects(projectsData);
       setIsLoading(false);

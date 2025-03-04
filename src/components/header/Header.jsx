@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 
 import './header.css';
 import ContactIcons from '../contact-icons/ContactIcons';
+import resume from '../../../public/wSimphiwe-Dladla.pdf';
+import { FaDownload } from 'react-icons/fa';
 
 const Header = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
 
   const handleRemoveShowNavClass = () => {
-    if (window.innerWidth > 530) {
+    if (window.innerWidth > 945) {
       const header = document.querySelector('header');
       header.classList.remove('show-nav-links');
 
@@ -28,6 +30,16 @@ const Header = () => {
 
   const handleShowNavLinks = () => {
     setShowNavLinks(!showNavLinks);
+  };
+
+  const downloadPdf = () => {
+    // Create an <a> element
+    const link = document.createElement('a');
+    link.href = `${resume}`;
+    link.download = 'Simphiwe-Dladla-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Clean up
   };
 
   return (
@@ -79,7 +91,23 @@ const Header = () => {
               Skills
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              to="#"
+              onClick={downloadPdf}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '5px',
+              }}
+            >
+              <FaDownload /> Resume
+            </NavLink>
+          </li>
         </ul>
+        {/* <button onClick={downloadPdf}>Download Resume</button> */}
         <ContactIcons />
       </div>
     </header>

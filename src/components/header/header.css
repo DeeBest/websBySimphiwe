@@ -104,7 +104,7 @@ header {
 }
 
 .show-nav-links {
-  height: 240px;
+  height: 300px;
 }
 .rotate-mobile-nav-btn {
   transform: rotateZ(90deg);
@@ -116,7 +116,7 @@ header {
   color: white;
   padding: 5px;
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 945px) {
   header {
     flex-direction: column;
     gap: 0px;

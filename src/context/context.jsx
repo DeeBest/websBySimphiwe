@@ -9,8 +9,10 @@ const ContextProvider = (props) => {
   const [skills, setSkills] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const projectsBackendUrl = 'http://localhost:5000/api/projects';
-  const skillsBackendUrl = 'http://localhost:5000/api/skills';
+  const projectsBackendUrl =
+    'https://websbysimphiwebackend.onrender.com/api/projects';
+  const skillsBackendUrl =
+    'https://websbysimphiwebackend.onrender.com/api/skills';
 
   const fetchResources = async () => {
     const urls = [projectsBackendUrl, skillsBackendUrl];

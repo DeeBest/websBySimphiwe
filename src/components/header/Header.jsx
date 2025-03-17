@@ -6,6 +6,7 @@ import './header.css';
 import ContactIcons from '../contact-icons/ContactIcons';
 import resume from '../../../public/wSimphiwe-Dladla.pdf';
 import { FaDownload } from 'react-icons/fa';
+import logoImage from '../../../src/assets/profile-pic.jpg';
 
 const Header = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
@@ -47,11 +48,7 @@ const Header = () => {
       <div id="logo-bars-icon-div">
         <div id="logo-container">
           <div id="logo-img-container">
-            <img
-              src="src/assets/profile-pic.jpg"
-              alt="logo image"
-              width={100}
-            />
+            <img src={logoImage} alt="logo image" width={100} />
           </div>
           <svg id="logo-text" viewBox="0 0 600 200">
             <text x="90%" y="70%" textAnchor="end" className="text-body">

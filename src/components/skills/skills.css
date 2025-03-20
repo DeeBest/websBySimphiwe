@@ -32,6 +32,26 @@
   font-size: 1.15rem;
   font-style: oblique;
 }
+#skills-listing-container #select-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+#skill-categories-select {
+  width: 200px;
+  padding: 10px;
+  outline: none;
+  background-color: hsl(0, 0%, 70%);
+  color: hsl(0, 0%, 30%);
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+}
 #skills-listing-body {
   width: 100%;
   display: flex;
@@ -59,22 +79,11 @@
   opacity: 0.8;
   box-shadow: none;
 }
-#skill-categories-select {
-  z-index: 2;
-  position: sticky;
-  top: 120px;
-  left: 0;
-  width: 200px;
-  padding: 10px;
-  outline: none;
-  background-color: hsl(0, 0%, 70%);
-  color: hsl(0, 0%, 30%);
-  font-size: 0.8rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
+
+@media screen and (max-width: 830px) {
+  #skills-listing-container #select-div {
+    flex-direction: column;
+  }
 }
 @keyframes skillsHrWidthGrow {
   0% {

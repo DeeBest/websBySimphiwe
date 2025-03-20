@@ -50,17 +50,7 @@ const Skills = ({ isHome }) => {
           just beginning.
         </p>
       </section>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          gap: '20px',
-          width: '100%',
-          position: 'relative',
-        }}
-      >
+      <div id="select-div">
         {!isHome && (
           <select
             name="skill-categories-select"

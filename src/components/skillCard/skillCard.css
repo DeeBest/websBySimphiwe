@@ -5,6 +5,7 @@
   border-radius: 10px;
   transition: box-shadow 350ms ease-in-out, transform 350ms ease-in-out;
   z-index: 5;
+  margin: 5px;
 }
 .skill-card:hover {
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
@@ -56,4 +57,13 @@
   font-size: small;
   font-style: oblique;
   text-align: start;
+}
+@media screen and (max-width: 460px) {
+  .skill-desc-container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 2px;
+    padding-left: 15px;
+    gap: 2px;
+  }
 }

@@ -30,6 +30,7 @@ header {
   border-left: 5px solid rgb(102, 102, 102);
   border-right: 5px solid rgb(102, 102, 102);
   overflow: hidden;
+  margin-right: 5px;
 }
 #logo-img-container img {
   width: 100%;

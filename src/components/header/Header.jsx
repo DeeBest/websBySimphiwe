@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import './header.css';
 import ContactIcons from '../contact-icons/ContactIcons';
-import resume from '../../../public/wSimphiwe-Dladla.pdf';
+import resume from '../../../public/SimphiweDladlaDevCV.pdf';
 import { FaDownload } from 'react-icons/fa';
 import logoImage from '../../../src/assets/profile-pic.jpg';
 

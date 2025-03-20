@@ -1,6 +1,6 @@
 import SkillCard from '../skillCard/SkillCard';
 import './skillsCategoryCard.css';
-import { FaTriangleExclamation } from 'react-icons/fa';
+import { FaTriangleExclamation } from 'react-icons/fa6';
 
 const SkillsCategoryCard = ({ categoryTitle, skillsArr }) => {
   if (skillsArr.length <= 0) {

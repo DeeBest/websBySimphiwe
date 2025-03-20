@@ -37,7 +37,7 @@ const Header = () => {
     // Create an <a> element
     const link = document.createElement('a');
     link.href = `${resume}`;
-    link.download = 'Simphiwe-Dladla-Resume.pdf';
+    link.download = 'SimphiweDladlaDevCV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link); // Clean up

@@ -2,15 +2,24 @@ import SkillCard from '../skillCard/SkillCard';
 import './skillsCategoryCard.css';
 
 const SkillsCategoryCard = ({ categoryTitle, skillsArr }) => {
-  return (
-    <div className="skills-category-card">
-      <h3>{categoryTitle}</h3>
-      <div id="skills-cards-div">
-        {skillsArr.map((skill, index) => (
-          <SkillCard key={index} skill={skill} />
-        ))}
+  if (skillsArr.length <= 0) {
+    return (
+      <section id="no-projects-sec">
+        <FaTriangleExclamation />
+        <h1 id="no-projects-h1">There are currently no skills to display.</h1>
+      </section>
+    );
+  } else {
+    return (
+      <div className="skills-category-card">
+        <h3>{categoryTitle}</h3>
+        <div id="skills-cards-div">
+          {skillsArr.map((skill, index) => (
+            <SkillCard key={index} skill={skill} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 export default SkillsCategoryCard;
